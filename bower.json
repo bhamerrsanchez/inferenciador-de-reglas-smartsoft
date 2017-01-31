@@ -1,0 +1,25 @@
+{
+  "name": "prueba-tecnica-desarrollo",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Brayan Hamer Rodriguez Sanchez"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "inferenciador"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AdminLTE": "adminlte#^2.3.11",
+    "angular": "angularjs#^1.6.1"
+  }
+}
