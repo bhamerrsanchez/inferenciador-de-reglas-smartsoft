@@ -6,7 +6,7 @@
     "node": "6.9.4"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "start-dev": "nodemon ./core/server",
     "start": "node ./core/server"
   },
@@ -21,6 +21,7 @@
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
     "socket.io": "^1.7.2",
-    "validate.js": "^0.11.1"
+    "validate.js": "^0.11.1",
+    "bower": "0.6.x"
   }
 }
