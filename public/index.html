@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="inferenciadorApp">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-    <title>Prueba de Desarrollo Tecnica</title>
+    <title>Inferenciador</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="components/AdminLTE/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="components/AdminLTE/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="components/AdminLTE/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="components/semantic/dist/semantic.css">
+    <link rel="stylesheet" href="components/ngToast/dist/ngToast.min.css">
+
+    <style type="text/css">
+        .dropable {
+            border-style: dashed;
+        }
+
+        .fill {
+            min-height: 100%;
+            height: 100%;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .full {
+            height: 100%
+        }
+    </style>
+
 </head>
-<body>
-<h1>Bienvenido a la aplicación de inferencia de reglas</h1>
+<body class="hold-transition skin-green-light fixed">
+<toast></toast>
+<loader></loader>
+<div class="wrapper">
+    <div ui-view></div>
+</div>
+</div>
+<!--Librerias adicionales-->
+<script src="components/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="components/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+<script src="components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="components/AdminLTE/dist/js/app.min.js"></script>
+<script src="components/semantic/dist/semantic.js"></script>
+<script src="components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="components/validate/validate.min.js"></script>
+<!--angular y modulos necesarios-->
+<script src="components/angular/angular.min.js"></script>
+<script src="components/angular-route/angular-route.js"></script>
+<script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+<script src="components/ngToast/dist/ngToast.min.js"></script>
+
+<!--aplicacion-->
+<script src="javascripts/app.js"></script>
+<script src="javascripts/directives/loader.js"></script>
+<script src="javascripts/controllers/workspaceController.js"></script>
+<script src="javascripts/controllers/ruleController.js"></script>
+<script src="javascripts/services/ruleService.js"></script>
+<script src="javascripts/controllers/inferenciadorController.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+<header class="main-header">
+    <a href="index.html" class="logo">
+        <span class="logo-lg"><b>I</b>nferenciador</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+    </nav>
+</header>
+<div class="content-wrapper" style="margin-left: 0px">
+    <section class="content-header">
+        <h1>
+            Listado De Reglas
+            <small>administración</small>
+            <button style="margin:5px" class="btn btn-success btn-flat pull-right" ng-click="openWorkspace()"><i
+                    class="fa fa-file"></i>
+                Nueva Regla
+            </button>
+            <button style="margin:5px" class="btn btn-success btn-flat pull-right" ng-click="openInferenciador()"><i
+                    class="fa fa-file"></i>
+                Probar Inferenciador
+            </button>
+        </h1>
+    </section>
+    <section class="content full">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Reglas</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="col-md-12">
+                            <div class="table-responsive no-padding">
+                                <table class="table table-bordered table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Condición</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                    <tr ng-repeat="rule in rules">
+                                        <td>{{rule.idRule}}</td>
+                                        <td>{{rule.name}}</td>
+                                        <td>{{rule.condition}}</td>
+                                        <td>
+                                            <button ng-show="historico.cantidadHistorico !== null"
+                                                    class="btn btn-flat btn-danger"
+                                                    title="Eliminar Regla" ng-click="deleteRule(rule.idRule)">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                            <button class="btn btn-flat btn-primary" title="Editar Regla"
+                                                    ng-click="editRule(rule.idRule)">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

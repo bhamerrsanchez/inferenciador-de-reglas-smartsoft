@@ -20,6 +20,15 @@
   ],
   "dependencies": {
     "AdminLTE": "adminlte#^2.3.11",
-    "angular": "angularjs#^1.6.1"
+    "font-awesome": "^4.6.3",
+    "Ionicons": "ionicons#^2.0.1",
+    "angular": "angularjs#^1.6.1",
+    "angular-ui-router": "0.4.2",
+    "angular-route": "1.6.1",
+    "semantic": "semantic-ui#^2.2.4",
+    "validate": "validate.js#0.11.1",
+    "angular-drag-and-drop-lists": "2.1.0",
+    "ngToast": "ngtoast#2.0.0",
+    "socket.io": "1.7.2"
   }
 }

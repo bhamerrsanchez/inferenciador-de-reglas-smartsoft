@@ -1,0 +1,59 @@
+<header class="main-header">
+    <a href="index.html" class="logo">
+        <span class="logo-lg"><b>I</b>nferenciador</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+    </nav>
+</header>
+<div class="content-wrapper" style="margin-left: 0px">
+    <section class="content-header">
+        <h1>
+            Inferenciador
+            <small>Prueba de reglas</small>
+            <button style="margin:5px" class="btn btn-success btn-flat pull-right" ng-click="openRules()"><i
+                    class="fa fa-file"></i>
+                volver
+            </button>
+        </h1>
+    </section>
+    <section class="content full">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Probar Inferenciador</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <form class="form-horizontal">
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="hecho" class="col-sm-12">Hecho</label>
+                                        <div class="col-lg-6 col-sm-6 col-xs-12">
+                                            <textarea name="hecho" id="hecho"  class="form-control" placeholder="Ingrese el hecho en formato json" ng-model="data.value"></textarea>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-xs-12">
+                                            <pre>{{data.object}}</pre>
+
+                                        </div>
+
+                                        <div class="col-lg-12 col-sm-12 col-xs-12">
+                                            <pre>{{result}}</pre>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn btn-flat btn-success" ng-click="inferenciar()"> Validar hecho</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

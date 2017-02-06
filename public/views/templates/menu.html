@@ -1,0 +1,147 @@
+<style>
+    .skin-green-light .treeview-menu > li > span {
+        color: #777;
+    }
+
+    .sidebar-menu .treeview-menu > li > span {
+        padding: 5px 5px 5px 15px;
+        display: block;
+        font-size: 14px;
+    }
+
+    .skin-green-light .sidebar span {
+        color: #444;
+    }
+
+    .sidebar-menu li > span {
+        position: relative;
+    }
+
+    .items-drag {
+        cursor: move;
+        list-style: none;
+    }
+    ul[dnd-list] {
+        margin: 0px;
+        min-height: 50px;
+        padding-left: 0px;
+        float: left;
+        width: 100%;
+    }
+    .item {
+        float:left;
+        width: auto;
+        margin: 5px;
+    }
+    .box-item {
+        box-shadow: 0 2px 8px rgb(0, 0, 0);
+    }
+    /***************************** Dropzone Styling *****************************/
+
+    /**
+     * The dnd-list should always have a min-height,
+     * otherwise you can't drop to it once it's empty
+     */
+    .dropzone ul[dnd-list] {
+        margin: 0px;
+        min-height: 50px;
+        padding-left: 0px;
+        float: left;
+        width: 100%;
+    }
+
+    .dropzone li {
+        display: block;
+        padding: 0px;
+    }
+
+    /**
+     * Reduce opacity of elements during the drag operation. This allows the user
+     * to see where he is dropping his element, even if the element is huge. The
+     * .dndDragging class is automatically set during the drag operation.
+     */
+    .dropzone .dndDragging {
+        opacity: 0.7;
+    }
+
+    /**
+     * The dndDraggingSource class will be applied to the source element of a drag
+     * operation. It makes sense to hide it to give the user the feeling that he's
+     * actually moving it. Note that the source element has also .dndDragging class.
+     */
+    .dropzone .dndDraggingSource {
+        display: none;
+    }
+
+    /**
+     * An element with .dndPlaceholder class will be added as child of the dnd-list
+     * while the user is dragging over it.
+     */
+    .dropzone .dndPlaceholder {
+        background-color: #ddd;
+        display: block;
+        float: left;
+        width: 50px;
+        min-height: 50px;
+        height: auto;
+
+    }
+
+    /***************************** Element Selection *****************************/
+
+    /*.dropzone .selected .item {*/
+        /*color: #141e76;*/
+        /*background-color: #9a9dc5;*/
+    /*}*/
+
+    /*.dropzone .selected .box {*/
+        /*border-color: #e95d60;*/
+    /*}*/
+
+    /*.dropzone .selected .box > h3 {*/
+        /*background-color: #dff0d8;*/
+        /*background-image: linear-gradient(to bottom,#dff0d8 0,#d0e9c6 100%);*/
+        /*border-color: #d6e9c6;*/
+        /*color: #3c763d;*/
+    /*}*/
+
+    /***************************** Element type specific styles *****************************/
+
+    .dropzone {
+        padding: 10px 15px;
+    }
+
+    /***************************** Toolbox *****************************/
+
+    .box .dndDragging {
+        opacity: 0.5;
+    }
+
+    .box .dndDraggingSource {
+        opacity: 1.0;
+    }
+
+</style>
+<aside class="main-sidebar">
+    <section class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="treeview" ng-repeat="option in options">
+                <a href="javascript:;"><i class="fa {{option.iconName}}"></i>
+                    <span>{{option.title}}</span>
+                </a>
+                <ul class="treeview-menu items-drag">
+                    <li ng-repeat="item in option.templates"
+                        dnd-draggable="item"
+                        dnd-effect-allowed="copy"
+                        dnd-copied="item.id = item.id + 1"
+                    >
+                        <div class="btn btn-flat items-drag"
+                                style="text-align: left;width: 100%;">
+                            <span><i class="fa fa-bars" style="width: 20px"></i>{{item.label}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</aside>

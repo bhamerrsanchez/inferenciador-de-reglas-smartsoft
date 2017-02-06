@@ -1,5 +1,4 @@
-
-/node_modules/
-/Prueba Tecnica Desarrollo.iml
 /.idea/
+/Prueba Tecnica Desarrollo.iml
+/node_modules/
 /public/components/
