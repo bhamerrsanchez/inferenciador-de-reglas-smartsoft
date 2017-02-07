@@ -62,7 +62,8 @@ function configureControllers() {
  */
 function configureConnectionDB() {
     console.log('realizando la conexion con la base de datos');
-    mongoose.connect('mongodb://localhost/inferenciador', function (err, res) {
+    //mongodb://<dbuser>:<dbpassword>@ds145039.mlab.com:45039/inferenciador
+    mongoose.connect('mongodb://prueba:prueba@ds145039.mlab.com:45039/inferenciador', function (err, res) {
         if (err) {
             console.log('ERROR: connecting to Database. ' + err);
         } else {
