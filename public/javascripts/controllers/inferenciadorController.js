@@ -4,7 +4,7 @@ inferenciadorApp.controller('inferenciadorController',
     ['$scope', '$state', 'ruleService', 'factoryLoader', 'ngToast',
         function ($scope, $state, $ruleService, $factoryLoader, $ngToast) {
             $scope.result = null;
-            var socket = io.connect('http://localhost:3000', {forceNew: true});
+            var socket = io.connect('http://https://still-dawn-67530.herokuapp.com', {forceNew: true});
 
             /**
              * Función que permite la visualizacion del mensaje obtenido
