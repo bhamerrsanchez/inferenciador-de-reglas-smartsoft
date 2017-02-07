@@ -14,8 +14,8 @@ io.on('connection', inferenciadorWebsocket.inferenciador);
 
 server.on('error', onError);
 
-server.listen(3000,function(){
-    console.log('Servidor ejecutandose en http://localhost:3000');
+server.listen(process.env.PORT || 3000,function(){
+    console.log('Servidor en ejecucion');
 });
 
 
