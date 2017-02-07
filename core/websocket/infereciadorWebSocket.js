@@ -5,7 +5,6 @@ var inferenciadorService = require('../service/inferenciadorService');
 
 exports.inferenciador = function (socket){
     console.log('Un cliente se conecto');
-    socket.emit('inferenciador-result',{message : 'hola parcero'});
     socket.on('inferenciar', function(data){
        console.log('recibiendo los datos para procesar el inferenciador');
         console.log(data);
