@@ -39,9 +39,9 @@ inferenciadorApp.config(['$stateProvider', '$urlRouterProvider',
     }]);
 
 inferenciadorApp.constant('APP_CONFIG', function () {
-    var API_PROTOCOL = 'http://';
-    var API_HOST = 'localhost';
-    var API_PORT = ':3000';
+    var API_PROTOCOL = 'https://';
+    var API_HOST = 'still-dawn-67530.herokuapp.com';
+    var API_PORT = '';
     var API_PATH = '/inferenciador/api';
     var API_VERSION = '/v1';
     var API_URL = API_PROTOCOL + API_HOST + API_PORT + API_PATH + API_VERSION;
