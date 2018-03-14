@@ -16,3 +16,7 @@ Para realizar la ejecución del proyecto ejecutar el siguiente comando
 
 * npm run start-dev - ambiente de desarrollo
 * npm run start - ambiente de producción
+
+EL demo de la aplicación se encuentra publicado en la siguiente url :
+
+[https://still-dawn-67530.herokuapp.com](https://still-dawn-67530.herokuapp.com)
